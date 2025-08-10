@@ -30,7 +30,7 @@ This guide contains runnable C examples, with **detailed explanations** (what it
 if (condition) {
     // executed if condition is true (non-zero)
 }
-```
+```c
 Analogy: If it is raining, take an umbrella.
 
 ### `if ... else`
@@ -40,7 +40,7 @@ if (condition) {
 } else {
     // if false
 }
-```
+```c
 Analogy: If you pass the exam → Celebrate. Else → Study harder.
 
 ### `if ... else-if ... else`
@@ -52,7 +52,7 @@ if (condition1) {
 } else {
     // none true
 }
-```
+```c
 Analogy: If sunny → park; else if cloudy → café; else → stay home.
 
 Important: checks run top-to-bottom; first true branch executes and the rest are skipped.
@@ -84,7 +84,7 @@ int main() {
 
     return 0;
 }
-```
+```c
 
 **What it does:** Prints a message only if the input number is greater than 0.
 
@@ -112,14 +112,14 @@ int main() {
 **Complexity:** O(1) time, O(1) space.
 
 **Flowchart:**
-```
+```c
 Start
   |
 [Input num]
   |
 (num > 0?) -Yes-> Print "Positive" -> End
            -No-> End
-```
+```c
 
 **Analogy:** If your wallet has money > 0 → you can buy a snack.
 
@@ -146,7 +146,7 @@ int main() {
 
     return 0;
 }
-```
+```c
 
 **What it does:** Classifies the number as "positive" if `num >= 0`; otherwise "negative". Note: this treats `0` as positive.
 
@@ -172,12 +172,12 @@ int main() {
 **Complexity:** O(1).
 
 **Flowchart:**
-```
+```c
 Start -> Input num
   |
 (num >= 0?) Yes -> Print "Positive"
              No  -> Print "Negative"
-```
+```c
 
 **Analogy:** If the temperature ≥ 0°C, water is liquid; else it’s frozen (simplified).
 
@@ -205,7 +205,7 @@ int main() {
     }
     return 0;
 }
-```
+```c
 
 **What it does:** Distinguishes all three mutually exclusive cases: positive, negative, or zero.
 
@@ -230,13 +230,13 @@ int main() {
 **Complexity:** O(1).
 
 **Flowchart:**
-```
+```c
 Start -> Input num
   |
 (num > 0?) Y -> Positive -> End
        N -> (num < 0?) Y -> Negative -> End
                    N -> Zero -> End
-```
+```c
 
 **Analogy:** Bank balance: positive → credit, negative → overdraft, zero → neutral.
 
@@ -262,7 +262,7 @@ int main() {
     }
     return 0;
 }
-```
+```c
 
 **What it does:** Uses `num % 2 == 0` to detect even numbers; else odd.
 
@@ -288,12 +288,12 @@ int main() {
 **Complexity:** O(1).
 
 **Flowchart:**
-```
+```c
 Start -> Input num
   |
 (num % 2 == 0?) Y -> Print "Even"
                 N -> Print "Odd"
-```
+```c
 
 **Analogy:** Splitting candies into pairs: if none left over → even; else → odd.
 
@@ -328,7 +328,7 @@ int main() {
 
     return 0;
 }
-```
+```c
 
 **What it does:** Assigns grades based on descending thresholds; higher grades checked first so they match correctly.
 
@@ -358,7 +358,7 @@ int main() {
 **Complexity:** O(1) time, O(1) space.
 
 **Flowchart (compact):**
-```
+```c
 Start -> Input marks
   |-> invalid? -> print invalid
   |-> marks>=90? -> A+
@@ -366,7 +366,7 @@ Start -> Input marks
   |-> marks>=60? -> B
   |-> marks>=40? -> C
   |-> else -> Fail
-```
+```c
 
 **Analogy:** Grading is like stepping down a ladder: the top rung first, then the next, etc.
 
@@ -393,7 +393,7 @@ int main() {
 
     return 0;
 }
-```
+```c
 
 **What it does:** Implements the Gregorian leap year rule:
 - Year divisible by 400 → leap.
@@ -425,11 +425,11 @@ int main() {
 **Complexity:** O(1).
 
 **Flowchart:**
-```
+```c
 Start -> Input year
   -> year%400==0? -> Leap
   -> year%4==0? -> year%100!=0? -> Leap : Not Leap
-```
+```c
 
 **Analogy:** Think of special rules: every 4 years normally, but centuries only sometimes (400-year rule).
 
@@ -462,7 +462,7 @@ int main() {
 
     return 0;
 }
-```
+```c
 
 **What it does:** Classifies age into buckets using `<` checks that avoid overlap.
 
@@ -519,7 +519,7 @@ int main() {
 
     return 0;
 }
-```
+```c
 
 **What it does:** Checks validity and sufficiency of withdrawal, updates balance if allowed.
 
@@ -580,7 +580,7 @@ int main() {
 
     return 0;
 }
-```
+```c
 
 **What it does:** Compares the (lowercased) input string to expected colors and prints the correct action.
 
@@ -636,7 +636,7 @@ int main() {
     }
     return 0;
 }
-```
+```c
 
 **What it does:** Compares pairs to determine the greatest. Using `>=` ensures correct behavior when numbers are equal (ties are resolved by reporting the first variable that satisfies the condition).
 
@@ -671,7 +671,7 @@ int main() {
     if (c > max) max = c;
     // Print which ones equal max
   }
-  ```
+  ```c
 - Very large integers: consider `long long` for larger-than-int ranges.
 
 **Suggested improvement:** Return a message listing all variables that share the maximum, or print "all equal" when appropriate.
@@ -679,12 +679,12 @@ int main() {
 **Complexity:** O(1).
 
 **Flowchart:**
-```
+```c
 Start -> Input a,b,c
   -> (a >= b && a >= c?) Yes -> Print a -> End
   -> (b >= a && b >= c?) Yes -> Print b -> End
   -> Else -> Print c -> End
-```
+```c
 
 **Analogy:** Choosing the tallest person in a group — if two are equally tallest, you might call the first one you checked "tallest" unless you explicitly check for ties.
 
@@ -710,7 +710,7 @@ int main() {
     }
     return 0;
 }
-```
+```c
 
 **What it does:** Verifies both username and password match expected strings; prints success only if both match.
 
@@ -768,7 +768,7 @@ int main() {
     printf("Total Bill: ₹%.2f\n", bill);
     return 0;
 }
-```
+```c
 
 **What it does:** Applies tiered pricing for electricity units:
 - First 100 units at ₹1.5/unit.
